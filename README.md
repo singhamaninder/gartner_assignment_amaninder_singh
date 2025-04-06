@@ -242,7 +242,7 @@ Key dependencies (see requirements.txt for complete list):
 - langchain (for RAG pipeline)
 
 
-## Further Enhancements
+## Further Possible Enhancements
 
 - **Ontology-Guided Retrieval**: Extract entities and themes from user queries using an LLM and use them to filter relevant content from the Neo4j graph before passing to the LLM for answer generation.
 
