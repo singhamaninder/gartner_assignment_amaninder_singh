@@ -73,6 +73,12 @@ class Neo4jModel:
         except Exception as e:
             logger.error("Error storing ontology in Neo4j", exc_info=True)
 
+    # Enhancement Note:
+    # This function currently returns a basic snapshot of the ontology.
+    # It can be extended to support ontology-guided retrieval, where entities and themes
+    # extracted from user queries are used to filter relevant content from the Neo4j graph
+    # before being passed to the LLM for more accurate and contextual responses.
+            
     def get_ontology(self, vectorstore):
         result = vectorstore.query("MATCH (o) RETURN o LIMIT 1")
         return result[0]["o"] if result else ""
