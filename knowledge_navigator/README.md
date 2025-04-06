@@ -241,3 +241,9 @@ Key dependencies (see requirements.txt for complete list):
 - python-dotenv
 - langchain (for RAG pipeline)
 
+
+## Further Enhancements
+
+- **Ontology-Guided Retrieval**: Extract entities and themes from user queries using an LLM and use them to filter relevant content from the Neo4j graph before passing to the LLM for answer generation.
+
+- **Hybrid Context Generation**: Combine results from vector similarity search and ontology-based graph queries to enrich the context provided to the LLM, improving response relevance and accuracy.
